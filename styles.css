@@ -1,0 +1,33 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: cadetblue;
+}
+
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3,10em);
+    grid-template-rows: repeat(3,10em);
+    justify-content: center;
+}
+
+.square {
+    background-color: white;
+    border: 1.5px solid black;
+    cursor:pointer;
+}
+
+.scoreBoard {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.scoreBoard > span {
+    padding: 0 6.5rem 1rem;
+}
