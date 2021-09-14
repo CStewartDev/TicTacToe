@@ -6,28 +6,55 @@
 body{
     height: 100vh;
     background-color: cadetblue;
+    font-family: 'Play', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center
 }
 
+h1 {
+    padding-bottom: 8rem;
+    font-size: 10rem;
+}
 
 .gameBoard {
     display: grid;
     grid-template-columns: repeat(3,10em);
     grid-template-rows: repeat(3,10em);
+    gap: 6px 6px;
     justify-content: center;
+    background-color: black;
+    border: 2px solid black;
 }
 
 .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     border: 1.5px solid black;
     cursor:pointer;
+    font-size: 6rem;
 }
 
 .scoreBoard {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
+
 }
 
 .scoreBoard > span {
     padding: 0 6.5rem 1rem;
+}
+
+.reset {
+    text-decoration: none;
+    border: none;
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding: .25rem 1rem;
+    border-radius:.75rem;
+    cursor: pointer;
 }
