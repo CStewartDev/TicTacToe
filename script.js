@@ -1,6 +1,6 @@
 const squares = [...document.querySelectorAll('.square')];
 const reset = document.querySelector('.reset');
-
+const banner = document.getElementById('banner');
 
 
 const gameBoard = (() => {
@@ -73,8 +73,6 @@ const gameBoard = (() => {
             winningHand.forEach(i => {
                 squares[i].classList.add('winningSquare');
             })
-            console.log(squares[winningHand[0]]);
-            console.log("winner");
         } 
     }
 

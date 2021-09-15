@@ -10,18 +10,19 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center
+    justify-content:center;
+    font-size: 30px;
 }
 
 h1 {
-    padding-bottom: 8rem;
-    font-size: 10rem;
+    padding-bottom: 4rem;
+    font-size: 8rem;
 }
 
 .gameBoard {
     display: grid;
-    grid-template-columns: repeat(3,10em);
-    grid-template-rows: repeat(3,10em);
+    grid-template-columns: repeat(3,6em);
+    grid-template-rows: repeat(3,6em);
     gap: 6px 6px;
     justify-content: center;
     background-color: black;
@@ -35,17 +36,17 @@ h1 {
     background-color: white;
     border: 1.5px solid black;
     cursor:pointer;
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .scoreBoard {
     font-size: 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
 }
 
-.scoreBoard > span {
+.scoreBoard > p {
     padding: 0 6.5rem 1rem;
 }
 
@@ -61,4 +62,8 @@ h1 {
 
 .winningSquare {
     background-color: lightgray;
+}
+
+#banner {
+    padding-bottom: 2rem;
 }
