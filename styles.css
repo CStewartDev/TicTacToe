@@ -58,3 +58,7 @@ h1 {
     border-radius:.75rem;
     cursor: pointer;
 }
+
+.winningSquare {
+    background-color: lightgray;
+}
