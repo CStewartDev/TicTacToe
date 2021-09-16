@@ -3,7 +3,7 @@
 	margin: 0;
 }
 
-body{
+main{
     height: 100vh;
     background-color: cadetblue;
     font-family: 'Play', sans-serif;
@@ -50,7 +50,7 @@ h1 {
     padding: 0 6.5rem 1rem;
 }
 
-.reset {
+.buttons > button {
     text-decoration: none;
     border: none;
     font-size: 2rem;
