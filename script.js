@@ -1,11 +1,15 @@
 const squares = [...document.querySelectorAll('.square')];
 const reset = document.querySelector('.reset');
 const banner = document.getElementById('banner');
+const menuBtn = document.querySelector('menuBtn')
 const p1Name = document.getElementById('p1');
 const p2Name = document.getElementById('p2');
 const p1Score = document.getElementById('p1Score');
 const p2Score = document.getElementById('p2Score');
 
+const modal = ()=> {
+
+}
 
 const gameBoard = (() => {
     const playerName = ()=> {
