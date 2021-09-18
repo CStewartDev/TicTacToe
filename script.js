@@ -1,27 +1,43 @@
 const squares = [...document.querySelectorAll('.square')];
 const reset = document.querySelector('.reset');
 const banner = document.getElementById('banner');
-const menuBtn = document.querySelector('menuBtn')
-const p1Name = document.getElementById('p1');
-const p2Name = document.getElementById('p2');
+const menuBtn = document.querySelector('.menuBtn')
+const menu = document.querySelector('menu');
+const p1DisplayName = document.getElementById('p1');
+const p2DisplayName = document.getElementById('p2');
 const p1Score = document.getElementById('p1Score');
 const p2Score = document.getElementById('p2Score');
+const p1NameInput = document.querySelector('#p1Name');
+const p2NameInput = document.querySelector('#p2Name');
+const menuClose = document.getElementById('close-menu');
 
-const modal = ()=> {
+(function () {
+    p1NameInput.value = "Player 1";
+    p2NameInput.value = "Player 2";
+})();
 
-}
 
 const gameBoard = (() => {
-    const playerName = ()=> {
-        console.log(p1Name.firstChild.data,p2Name)
-    }
-    playerName();
-    const playerFactory = (name,team,turn)=> {
-    return {name,team,turn};
+    const playerFactory = (name,team,turn)=> {   
+        return {name,team,turn};
     }
 
-    const player1 = playerFactory("P1","X",true)
-    const player2 = playerFactory("P2","O",false)
+    let player1 = playerFactory(p1NameInput.value,"X",true)
+    let player2 = playerFactory(p2NameInput.value,"O",false)
+    
+    const displayMenu = ()=> {
+        menu.classList.contains("hidden")?menu.classList.remove('hidden') : menu.classList.add('hidden')
+    }
+    
+    const closeMenu = () => {
+        displayMenu();
+        p1DisplayName.firstChild.data = p1NameInput.value;
+        p2DisplayName.firstChild.data = p2NameInput.value;
+        player1 = playerFactory(p1NameInput.value,"X",true)
+        player2 = playerFactory(p2NameInput.value,"O",false)
+        handleBannerUpdate()
+    }
+    
 
     //create game board and declare variables
     let board = [];
@@ -121,6 +137,9 @@ const gameBoard = (() => {
         gameActive = true;
     })
     
+    menuBtn.addEventListener('click',displayMenu)
+    menuClose.addEventListener('click',closeMenu)
+
     handleBannerUpdate()
     squares.forEach(square=>square.addEventListener('click',e=>makeMove(e)))
 })();
