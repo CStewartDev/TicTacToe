@@ -1,6 +1,17 @@
 # TicTacToe
 TOP TicTacToe Project
 
+Lessons learned: 
+Factories return an object in which the params in get put into an object.
+Not cluttering up the global scope is helpful, and having a module where they lives makes taking care of state easier. 
+This lesson has really helped me understand why react was built the way it was and how it works. This project is purely JS, but i can see now why React was made.
+I left the selectors in the global scope, but i think they could easily be refactored.
+
+I would like to come back and take on the optional challenge, as well as clean up the styles for this one. It is definitely one of my weaker spots.
+
+Overall, happy with how the project turned out.
+
+
 
 Assignment
 
